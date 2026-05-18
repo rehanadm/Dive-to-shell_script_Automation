@@ -1,0 +1,25 @@
+Linux already provides logrotate.
+For production Linux servers (RHEL / Ubuntu / Debian / Oracle Linux), using built-in logrotate is usually preferred over a custom shell script.
+
+Example configuration:
+
+Create file:
+
+sudo vi /etc/logrotate.d/myapp
+
+Add:
+
+/var/log/myapp.log {
+    daily
+    rotate 7
+    compress
+    missingok
+    notifempty
+    create 0644 root root
+}
+
+Test configuration:
+logrotate -d /etc/logrotate.conf
+
+Force rotation:
+logrotate -f /etc/logrotate.conf
