@@ -1,0 +1,5 @@
+wildcard.globalworld.com
+wildcard.globalworldnew.com
+app1.globalworld.com
+api.globalworld.com
+portal.globalworld.com
